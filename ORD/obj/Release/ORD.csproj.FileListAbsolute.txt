@@ -1,0 +1,13 @@
+C:\Users\spa89\source\repos\ORD\ORD\bin\Release\ORD.exe.config
+C:\Users\spa89\source\repos\ORD\ORD\bin\Release\ORD.exe
+C:\Users\spa89\source\repos\ORD\ORD\bin\Release\ORD.pdb
+C:\Users\spa89\source\repos\ORD\ORD\obj\Release\ORD.Form1.resources
+C:\Users\spa89\source\repos\ORD\ORD\obj\Release\ORD.Properties.Resources.resources
+C:\Users\spa89\source\repos\ORD\ORD\obj\Release\ORD.Resources.Resource1.resources
+C:\Users\spa89\source\repos\ORD\ORD\obj\Release\ORD.csproj.GenerateResource.cache
+C:\Users\spa89\source\repos\ORD\ORD\obj\Release\ORD.csproj.CoreCompileInputs.cache
+C:\Users\spa89\source\repos\ORD\ORD\obj\Release\ORD.exe
+C:\Users\spa89\source\repos\ORD\ORD\obj\Release\ORD.pdb
+C:\Users\spa89\source\repos\ORD\ORD\bin\Release\MetroFramework.dll
+C:\Users\spa89\source\repos\ORD\ORD\bin\Release\MetroFramework.Fonts.dll
+C:\Users\spa89\source\repos\ORD\ORD\obj\Release\ORD.csproj.CopyComplete
