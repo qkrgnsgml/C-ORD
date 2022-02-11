@@ -514,9 +514,9 @@ namespace ORD
             label6.Text = i.ToString();
         }
         List<string> hab = new List<string>();
-        
-        
-        string[] cho = new string[] {
+
+
+        /*string[] cho = new string[] {
 "도플라밍고 초월"
 ,"시라호시 초월"
 ,"샹크스 초월"
@@ -570,12 +570,19 @@ namespace ORD
 ,"아인 제한됨"
 ,"시노부 제한됨"
 ,"레베카 제한됨"
-,"킹 제한됨"};
-
-        /* void makeList()
+,"킹 제한됨"};*/
+        static List<string> cho = new List<string>();
+        static List<string> bul = new List<string>();
+        static List<string> young = new List<string>();
+        static List<string> ze = new List<string>();
+        void makeList()
         {
             for (int i = 0; i < random.Length; i++)
-            {
+            {   
+                if (random[i].Contains("강제")|| random[i].Contains("랜덤"))
+                {
+                    continue;
+                }
                 if (random[i].Contains("초월"))
                 {
                     cho.Add(random[i]);
@@ -593,10 +600,11 @@ namespace ORD
                     ze.Add(random[i]);
                 }
             }
-        }*/
-
+        }
+        
         private void button5_Click(object sender, EventArgs e)
         {
+            makeList();
             hab.Clear();
             for (int i = 0; i < hab.Count; i++)
             {
@@ -608,24 +616,25 @@ namespace ORD
                 {
                     hab.RemoveAt(0);
                 }
-                for (int i = 0; i < cho.Length; i++)
+                for (int i = 0; i < cho.Count; i++)
                 {
                     hab.Add(cho[i]);
                 }
-                for (int i = 0; i < bul.Length; i++)
+                for (int i = 0; i < bul.Count; i++)
                 {
                     hab.Add(bul[i]);
                 }
-                for (int i = 0; i < young.Length; i++)
+                for (int i = 0; i < young.Count; i++)
                 {
                     hab.Add(young[i]);
                 }
-                for (int i = 0; i < ze.Length; i++)
+                for (int i = 0; i < ze.Count; i++)
                 {
                     hab.Add(ze[i]);
                 }
+                
                 Random rand = new Random();
-                int randIndex = rand.Next(0, 51);
+                int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }
             else if (checkBox5.Checked && checkBox3.Checked && checkBox4.Checked)
@@ -634,20 +643,21 @@ namespace ORD
                 {
                     hab.RemoveAt(0);
                 }
-                for (int i = 0; i < ze.Length; i++)
+                for (int i = 0; i < ze.Count; i++)
                 {
                     hab.Add(ze[i]);
                 }
-                for (int i = 0; i < bul.Length; i++)
+                for (int i = 0; i < bul.Count; i++)
                 {
                     hab.Add(bul[i]);
                 }
-                for (int i = 0; i < young.Length; i++)
+                for (int i = 0; i < young.Count; i++)
                 {
                     hab.Add(young[i]);
                 }
+                
                 Random rand = new Random();
-                int randIndex = rand.Next(0, 26);
+                int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }//불영제
             else if (checkBox2.Checked && checkBox3.Checked && checkBox5.Checked)
@@ -656,20 +666,21 @@ namespace ORD
                 {
                     hab.RemoveAt(0);
                 }
-                for (int i = 0; i < cho.Length; i++)
+                for (int i = 0; i < cho.Count; i++)
                 {
                     hab.Add(cho[i]);
                 }
-                for (int i = 0; i < bul.Length; i++)
+                for (int i = 0; i < bul.Count; i++)
                 {
                     hab.Add(bul[i]);
                 }
-                for (int i = 0; i < ze.Length; i++)
+                for (int i = 0; i < ze.Count; i++)
                 {
                     hab.Add(ze[i]);
                 }
+                
                 Random rand = new Random();
-                int randIndex = rand.Next(0, 44);
+                int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }//초불제
             else if (checkBox2.Checked && checkBox3.Checked && checkBox4.Checked)
@@ -678,20 +689,21 @@ namespace ORD
                 {
                     hab.RemoveAt(0);
                 }
-                for (int i = 0; i < cho.Length; i++)
+                for (int i = 0; i < cho.Count; i++)
                 {
                     hab.Add(cho[i]);
                 }
-                for (int i = 0; i < bul.Length; i++)
+                for (int i = 0; i < bul.Count; i++)
                 {
                     hab.Add(bul[i]);
                 }
-                for (int i = 0; i < young.Length; i++)
+                for (int i = 0; i < young.Count; i++)
                 {
                     hab.Add(young[i]);
                 }
+                
                 Random rand = new Random();
-                int randIndex = rand.Next(0, 41);
+                int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }//초불영
             else if (checkBox2.Checked && checkBox3.Checked)
@@ -700,16 +712,17 @@ namespace ORD
                 {
                     hab.RemoveAt(0);
                 }
-                for (int i = 0; i < cho.Length; i++)
+                for (int i = 0; i < cho.Count; i++)
                 {
                     hab.Add(cho[i]);
                 }
-                for (int i = 0; i < bul.Length; i++)
+                for (int i = 0; i < bul.Count; i++)
                 {
                     hab.Add(bul[i]);
                 }
+                
                 Random rand = new Random();
-                int randIndex = rand.Next(0, 36);
+                int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }//초불
             else if (checkBox2.Checked && checkBox5.Checked)
@@ -718,16 +731,17 @@ namespace ORD
                 {
                     hab.RemoveAt(0);
                 }
-                for (int i = 0; i < cho.Length; i++)
+                for (int i = 0; i < cho.Count; i++)
                 {
                     hab.Add(cho[i]);
                 }
-                for (int i = 0; i < ze.Length; i++)
+                for (int i = 0; i < ze.Count; i++)
                 {
                     hab.Add(ze[i]);
                 }
+                
                 Random rand = new Random();
-                int randIndex = rand.Next(0, 33);
+                int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }//초제
             else if (checkBox2.Checked && checkBox4.Checked)
@@ -736,16 +750,17 @@ namespace ORD
                 {
                     hab.RemoveAt(0);
                 }
-                for (int i = 0; i < cho.Length; i++)
+                for (int i = 0; i < cho.Count; i++)
                 {
                     hab.Add(cho[i]);
                 }
-                for (int i = 0; i < young.Length; i++)
+                for (int i = 0; i < young.Count; i++)
                 {
                     hab.Add(young[i]);
                 }
+                
                 Random rand = new Random();
-                int randIndex = rand.Next(0, 32);
+                int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }//초영
             else if (checkBox3.Checked && checkBox4.Checked)
@@ -754,16 +769,17 @@ namespace ORD
                 {
                     hab.RemoveAt(0);
                 }
-                for (int i = 0; i < bul.Length; i++)
+                for (int i = 0; i < bul.Count; i++)
                 {
                     hab.Add(bul[i]);
                 }
-                for (int i = 0; i < young.Length; i++)
+                for (int i = 0; i < young.Count; i++)
                 {
                     hab.Add(young[i]);
                 }
+                
                 Random rand = new Random();
-                int randIndex = rand.Next(0, 18);
+                int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }//불영
             else if (checkBox3.Checked && checkBox5.Checked)
@@ -772,16 +788,16 @@ namespace ORD
                 {
                     hab.RemoveAt(0);
                 }
-                for (int i = 0; i < ze.Length; i++)
+                for (int i = 0; i < ze.Count; i++)
                 {
                     hab.Add(ze[i]);
                 }
-                for (int i = 0; i < bul.Length; i++)
+                for (int i = 0; i < bul.Count; i++)
                 {
                     hab.Add(bul[i]);
                 }
                 Random rand = new Random();
-                int randIndex = rand.Next(0, 19);
+                int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }//불제
             else if (checkBox4.Checked && checkBox5.Checked)
@@ -790,16 +806,17 @@ namespace ORD
                 {
                     hab.RemoveAt(0);
                 }
-                for (int i = 0; i < young.Length; i++)
+                for (int i = 0; i < young.Count; i++)
                 {
                     hab.Add(young[i]);
                 }
-                for (int i = 0; i < ze.Length; i++)
+                for (int i = 0; i < ze.Count; i++)
                 {
                     hab.Add(ze[i]);
                 }
+                
                 Random rand = new Random();
-                int randIndex = rand.Next(0, 15);
+                int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }//영제
             else if (checkBox2.Checked)
@@ -808,12 +825,13 @@ namespace ORD
                 {
                     hab.RemoveAt(0);
                 }
-                for (int i = 0; i < cho.Length; i++)
+                for (int i = 0; i < cho.Count; i++)
                 {
                     hab.Add(cho[i]);
                 }
+                
                 Random rand = new Random();
-                int randIndex = rand.Next(0, 25);
+                int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }
             else if (checkBox3.Checked)
@@ -822,12 +840,13 @@ namespace ORD
                 {
                     hab.RemoveAt(0);
                 }
-                for (int i = 0; i < bul.Length; i++)
+                for (int i = 0; i < bul.Count; i++)
                 {
                     hab.Add(bul[i]);
                 }
+                
                 Random rand = new Random();
-                int randIndex = rand.Next(0, 11);
+                int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }
             else if (checkBox4.Checked)
@@ -836,26 +855,25 @@ namespace ORD
                 {
                     hab.RemoveAt(0);
                 }
-                for (int i = 0; i < young.Length; i++)
+                for (int i = 0; i < young.Count; i++)
                 {
                     hab.Add(young[i]);
                 }
+                
                 Random rand = new Random();
-                int randIndex = rand.Next(0, 7);
+                int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }
             else if (checkBox5.Checked)
             {
-                for (int i = 0; i < hab.Count; i++)
+                
+                foreach(string str in ze)
                 {
-                    hab.RemoveAt(0);
+                    hab.Add(str);
                 }
-                for (int i = 0; i < ze.Length; i++)
-                {
-                    hab.Add(ze[i]);
-                }
+                
                 Random rand = new Random();
-                int randIndex = rand.Next(0, 8);
+                int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }//제
         }
