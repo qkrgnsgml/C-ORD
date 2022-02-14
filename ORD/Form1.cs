@@ -877,12 +877,13 @@ namespace ORD
                 label7.Text = hab[randIndex];
             }//제
         }
-
+        Dictionary<string, int> Dic = new Dictionary<string, int>();
         static List<string> jung = new List<string>();
         int sukCount = 0;
         private void button6_Click(object sender, EventArgs e)
         {
             sukCount = 0;
+            Dic.Clear();
             jung.Clear();
             if (File.Exists(filejung) == false)
             {
@@ -899,7 +900,7 @@ namespace ORD
                     data = data.TrimEnd();
                     string[] junglee = data.Split(new char[] {' '});
                     for(int i = 0; i < junglee.Length; i++)
-                    {
+                    {                        
                         if(junglee[i] == "") { continue; }
                         jung.Add(junglee[i]);
                     }
@@ -910,6 +911,42 @@ namespace ORD
 
                 File.Delete(filejung);
                 jung.Sort();
+
+                foreach(string str in jung)
+                {
+
+                    int count = 0;
+                    if (Dic.ContainsKey(str))
+                    {
+                        count = Dic[str];
+                    }
+                    if (count == 0)
+                    {
+                        Dic.Add(str, 1);
+                    }
+                    else
+                    {
+                        //Dic.Remove(str);
+                        Dic[str]++;
+                    }
+                }
+
+                jung.Clear();
+                
+                foreach (KeyValuePair<string, int> each in Dic)
+                {                    
+                    string K = each.Key;
+                    int V = each.Value;
+                    if (V == 1)
+                    {
+                        jung.Add(K);
+                    }
+                    else
+                    {
+                        jung.Add(K + "x" + V);
+                    }
+                    
+                }
 
                 /*while (true)
                 {
@@ -1114,50 +1151,64 @@ namespace ORD
                 else if (jung[i].Contains("x7"))
                 {
                     string a = jung[i].Replace("x7", "");
-                    erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a);
-                    erase.Add(a); erase.Add(a); erase.Add(a);
+                    eras(7, a);
                 }
                 else if (jung[i].Contains("x8"))
                 {
                     string a = jung[i].Replace("x8", "");
-                    erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a);
-                    erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a);
+                    eras(8, a);
                 }
                 else if (jung[i].Contains("x9"))
                 {
                     string a = jung[i].Replace("x9", "");
-                    erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a);
-                    erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a);
+                    eras(9, a);
                 }
                 else if (jung[i].Contains("x10"))
                 {
                     string a = jung[i].Replace("x10", "");
-                    erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a);
-                    erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a);
+                    eras(10, a);
                 }
                 else if (jung[i].Contains("x11"))
                 {
                     string a = jung[i].Replace("x11", "");
-                    erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a);
-                    erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a);
+                    eras(11, a);
                 }
                 else if (jung[i].Contains("x12"))
                 {
                     string a = jung[i].Replace("x12", "");
-                    erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a);
-                    erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a);
+                    eras(12, a);
                 }
                 else if (jung[i].Contains("x13"))
                 {
                     string a = jung[i].Replace("x13", "");
-                    erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a);
-                    erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a); erase.Add(a);
+                    eras(13, a);
                 }
                 else
                 {
                     erase.Add(jung[i]);
                 }
             }
+
+/*            var fs2 = new FileStream(filejung, FileMode.Open);
+            var sr2 = new StreamReader(fs2);
+
+            jung.Clear();
+
+            while (sr2.EndOfStream == false)
+            {
+                string data = sr2.ReadLine();
+                data = data.TrimEnd();
+                string[] junglee = data.Split(new char[] { ' ' });
+                for (int i = 0; i < junglee.Length; i++)
+                {                    
+                    jung.Add(junglee[i]);
+                }
+            }
+
+            sr2.Close();
+            fs2.Close();*/
+
+
         }
         private void eras(int i,string a)
         {
