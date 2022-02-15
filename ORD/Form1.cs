@@ -500,7 +500,7 @@ namespace ORD
             stack = 0;
             st.RemoveRange(0, st.Count);
             label3.Text = "";
-            string a= "";
+            string a = "";
             label1.Text = "";
             label2.Text = "";
             var filename = Path.Combine(path, fileProduct);
@@ -578,8 +578,8 @@ namespace ORD
         void makeList()
         {
             for (int i = 0; i < random.Length; i++)
-            {   
-                if (random[i].Contains("강제")|| random[i].Contains("랜덤"))
+            {
+                if (random[i].Contains("강제") || random[i].Contains("랜덤"))
                 {
                     continue;
                 }
@@ -601,7 +601,7 @@ namespace ORD
                 }
             }
         }
-        
+
         private void button5_Click(object sender, EventArgs e)
         {
             makeList();
@@ -632,7 +632,7 @@ namespace ORD
                 {
                     hab.Add(ze[i]);
                 }
-                
+
                 Random rand = new Random();
                 int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
@@ -655,7 +655,7 @@ namespace ORD
                 {
                     hab.Add(young[i]);
                 }
-                
+
                 Random rand = new Random();
                 int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
@@ -678,7 +678,7 @@ namespace ORD
                 {
                     hab.Add(ze[i]);
                 }
-                
+
                 Random rand = new Random();
                 int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
@@ -701,7 +701,7 @@ namespace ORD
                 {
                     hab.Add(young[i]);
                 }
-                
+
                 Random rand = new Random();
                 int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
@@ -720,7 +720,7 @@ namespace ORD
                 {
                     hab.Add(bul[i]);
                 }
-                
+
                 Random rand = new Random();
                 int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
@@ -739,7 +739,7 @@ namespace ORD
                 {
                     hab.Add(ze[i]);
                 }
-                
+
                 Random rand = new Random();
                 int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
@@ -758,7 +758,7 @@ namespace ORD
                 {
                     hab.Add(young[i]);
                 }
-                
+
                 Random rand = new Random();
                 int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
@@ -777,7 +777,7 @@ namespace ORD
                 {
                     hab.Add(young[i]);
                 }
-                
+
                 Random rand = new Random();
                 int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
@@ -814,7 +814,7 @@ namespace ORD
                 {
                     hab.Add(ze[i]);
                 }
-                
+
                 Random rand = new Random();
                 int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
@@ -829,7 +829,7 @@ namespace ORD
                 {
                     hab.Add(cho[i]);
                 }
-                
+
                 Random rand = new Random();
                 int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
@@ -844,7 +844,7 @@ namespace ORD
                 {
                     hab.Add(bul[i]);
                 }
-                
+
                 Random rand = new Random();
                 int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
@@ -859,19 +859,19 @@ namespace ORD
                 {
                     hab.Add(young[i]);
                 }
-                
+
                 Random rand = new Random();
                 int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
             }
             else if (checkBox5.Checked)
             {
-                
-                foreach(string str in ze)
+
+                foreach (string str in ze)
                 {
                     hab.Add(str);
                 }
-                
+
                 Random rand = new Random();
                 int randIndex = rand.Next(0, hab.Count);
                 label7.Text = hab[randIndex];
@@ -898,10 +898,10 @@ namespace ORD
                 {
                     string data = sr.ReadLine();
                     data = data.TrimEnd();
-                    string[] junglee = data.Split(new char[] {' '});
-                    for(int i = 0; i < junglee.Length; i++)
-                    {                        
-                        if(junglee[i] == "") { continue; }
+                    string[] junglee = data.Split(new char[] { ' ' });
+                    for (int i = 0; i < junglee.Length; i++)
+                    {
+                        if (junglee[i] == "") { continue; }
                         jung.Add(junglee[i]);
                     }
                 }
@@ -912,7 +912,7 @@ namespace ORD
                 File.Delete(filejung);
                 jung.Sort();
 
-                foreach(string str in jung)
+                foreach (string str in jung)
                 {
 
                     int count = 0;
@@ -932,9 +932,9 @@ namespace ORD
                 }
 
                 jung.Clear();
-                
+
                 foreach (KeyValuePair<string, int> each in Dic)
-                {                    
+                {
                     string K = each.Key;
                     int V = each.Value;
                     if (V == 1)
@@ -945,7 +945,7 @@ namespace ORD
                     {
                         jung.Add(K + "x" + V);
                     }
-                    
+
                 }
 
                 /*while (true)
@@ -979,7 +979,7 @@ namespace ORD
                     }
                 }*/
 
-                if (checkedListBox1.GetItemChecked(0)) 
+                if (checkedListBox1.GetItemChecked(0))
                 {
                     using (var sw = new StreamWriter(new FileStream(filejung, FileMode.Create)))
                     {
@@ -1189,30 +1189,30 @@ namespace ORD
                 }
             }
 
-/*            var fs2 = new FileStream(filejung, FileMode.Open);
-            var sr2 = new StreamReader(fs2);
+            /*            var fs2 = new FileStream(filejung, FileMode.Open);
+                        var sr2 = new StreamReader(fs2);
 
-            jung.Clear();
+                        jung.Clear();
 
-            while (sr2.EndOfStream == false)
-            {
-                string data = sr2.ReadLine();
-                data = data.TrimEnd();
-                string[] junglee = data.Split(new char[] { ' ' });
-                for (int i = 0; i < junglee.Length; i++)
-                {                    
-                    jung.Add(junglee[i]);
-                }
-            }
+                        while (sr2.EndOfStream == false)
+                        {
+                            string data = sr2.ReadLine();
+                            data = data.TrimEnd();
+                            string[] junglee = data.Split(new char[] { ' ' });
+                            for (int i = 0; i < junglee.Length; i++)
+                            {                    
+                                jung.Add(junglee[i]);
+                            }
+                        }
 
-            sr2.Close();
-            fs2.Close();*/
+                        sr2.Close();
+                        fs2.Close();*/
 
 
         }
-        private void eras(int i,string a)
+        private void eras(int i, string a)
         {
-            
+
             for (int j = 0; j < i; j++)
             {
                 erase.Add(a);
@@ -1225,8 +1225,77 @@ namespace ORD
         {
             Random rand = new Random();
             int randIndex = rand.Next(0, erase.Count);
-            label9.Text = $"{randIndex+1}번 {erase[randIndex]}";
+            label9.Text = $"{randIndex + 1}번 {erase[randIndex]}";
             erase.RemoveAt(randIndex);
+
+
+            Dic.Clear();
+            jung.Clear();
+            if (File.Exists(filejung) == false)
+            {
+                File.Create(filejung);
+            }
+            else
+            {
+                foreach (string str in erase)
+                {
+
+                    int count = 0;
+                    if (Dic.ContainsKey(str))
+                    {
+                        count = Dic[str];
+                    }
+                    if (count == 0)
+                    {
+                        Dic.Add(str, 1);
+                    }
+                    else
+                    {
+                        //Dic.Remove(str);
+                        Dic[str]++;
+                    }
+                }                
+
+                foreach (KeyValuePair<string, int> each in Dic)
+                {
+                    string K = each.Key;
+                    int V = each.Value;
+                    if (V == 1)
+                    {
+                        jung.Add(K);
+                    }
+                    else
+                    {
+                        jung.Add(K + "x" + V);
+                    }
+
+                }
+
+                using (var sw = new StreamWriter(new FileStream(filejung, FileMode.Create)))
+                {
+                    for (int i = 0; i < jung.Count; i++)
+                    {
+                        sukCount += 1;
+                        for (int j = 2; j < 20; j++)
+                        {
+                            if (jung[i].Contains($"x{j}"))
+                            {
+                                sukCount += j - 1;
+                            }
+                        }
+                        //sw.Write($"{memo[i]} ");
+                        if ((i % 2) == 1)
+                        {
+                            sw.WriteLine($"{jung[i]}");
+                        }
+                        else
+                        {
+                            sw.Write($"{jung[i]} ");
+                        }
+                    }
+                    //sw.Write($"//{sukCount}숙");
+                }
+            }
         }
     }
 }
