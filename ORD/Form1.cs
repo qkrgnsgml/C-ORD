@@ -879,12 +879,14 @@ namespace ORD
         }
         Dictionary<string, int> Dic = new Dictionary<string, int>();
         static List<string> jung = new List<string>();
+        static List<string> jung2 = new List<string>();
         int sukCount = 0;
         private void button6_Click(object sender, EventArgs e)
         {
             sukCount = 0;
             Dic.Clear();
             jung.Clear();
+            jung2.Clear();
             if (File.Exists(filejung) == false)
             {
                 File.Create(filejung);
@@ -902,7 +904,7 @@ namespace ORD
                     for (int i = 0; i < junglee.Length; i++)
                     {
                         if (junglee[i] == "") { continue; }
-                        jung.Add(junglee[i]);
+                        jung2.Add(junglee[i]);
                     }
                 }
 
@@ -910,7 +912,74 @@ namespace ORD
                 fs.Close();
 
                 File.Delete(filejung);
-                jung.Sort();
+                jung2.Sort();
+                for (int i = 0; i < jung2.Count; i++)
+                {
+                    if (jung2[i].Contains("x2"))
+                    {
+                        string a = jung2[i].Replace("x2", "");
+                        jung23(2, a);
+                    }
+                    else if (jung2[i].Contains("x3"))
+                    {
+                        string a = jung2[i].Replace("x3", "");
+                        jung23(3, a);
+                    }
+                    else if (jung2[i].Contains("x4"))
+                    {
+                        string a = jung2[i].Replace("x4", "");
+                        jung23(4, a);
+                    }
+                    else if (jung2[i].Contains("x5"))
+                    {
+                        string a = jung2[i].Replace("x5", "");
+                        jung23(5, a);
+                    }
+                    else if (jung2[i].Contains("x6"))
+                    {
+                        string a = jung2[i].Replace("x6", "");
+                        jung23(6, a);
+                    }
+                    else if (jung2[i].Contains("x7"))
+                    {
+                        string a = jung2[i].Replace("x7", "");
+                        jung23(7, a);
+                    }
+                    else if (jung2[i].Contains("x8"))
+                    {
+                        string a = jung2[i].Replace("x8", "");
+                        jung23(8, a);
+                    }
+                    else if (jung2[i].Contains("x9"))
+                    {
+                        string a = jung2[i].Replace("x9", "");
+                        jung23(9, a);
+                    }
+                    else if (jung2[i].Contains("x10"))
+                    {
+                        string a = jung2[i].Replace("x10", "");
+                        jung23(10, a);
+                    }
+                    else if (jung2[i].Contains("x11"))
+                    {
+                        string a = jung2[i].Replace("x11", "");
+                        jung23(11, a);
+                    }
+                    else if (jung2[i].Contains("x12"))
+                    {
+                        string a = jung2[i].Replace("x12", "");
+                        jung23(12, a);
+                    }
+                    else if (jung2[i].Contains("x13"))
+                    {
+                        string a = jung2[i].Replace("x13", "");
+                        jung23(13, a);
+                    }
+                    else
+                    {
+                        jung.Add(jung2[i]);
+                    }
+                }
 
                 foreach (string str in jung)
                 {
@@ -1216,6 +1285,14 @@ namespace ORD
             for (int j = 0; j < i; j++)
             {
                 erase.Add(a);
+            }
+        }
+        private void jung23(int i, string a)
+        {
+
+            for (int j = 0; j < i; j++)
+            {
+                jung.Add(a);
             }
         }
 
