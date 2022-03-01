@@ -880,9 +880,11 @@ namespace ORD
         Dictionary<string, int> Dic = new Dictionary<string, int>();
         static List<string> jung = new List<string>();
         static List<string> jung2 = new List<string>();
+        int sanct = 0;
         int sukCount = 0;
         private void button6_Click(object sender, EventArgs e)
         {
+            sanct = 0;
             sukCount = 0;
             Dic.Clear();
             jung.Clear();
@@ -978,6 +980,10 @@ namespace ORD
                     else
                     {
                         jung.Add(jung2[i]);
+                        if (jung2[i].Contains("초월") || jung2[i].Contains("불멸") || jung2[i].Contains("영원") || jung2[i].Contains("제한"))
+                        {
+                            sanct++;
+                        }
                     }
                 }
 
@@ -1257,6 +1263,7 @@ namespace ORD
                     erase.Add(jung[i]);
                 }
             }
+            label10.Text = $"상위 : {sanct}개";
 
             /*            var fs2 = new FileStream(filejung, FileMode.Open);
                         var sr2 = new StreamReader(fs2);
@@ -1289,10 +1296,15 @@ namespace ORD
         }
         private void jung23(int i, string a)
         {
-
+            
+            
             for (int j = 0; j < i; j++)
             {
                 jung.Add(a);
+                if (a.Contains("초월") || a.Contains("불멸") || a.Contains("영원") || a.Contains("제한"))
+                {
+                    sanct++;
+                }
             }
         }
 
