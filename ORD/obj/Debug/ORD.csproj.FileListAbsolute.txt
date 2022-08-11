@@ -22,3 +22,4 @@ C:\Users\spa89\source\repos\ORD\ORD\obj\Debug\ORD.csproj.CoreCompileInputs.cache
 C:\Users\spa89\source\repos\ORD\ORD\obj\Debug\ORD.csproj.CopyComplete
 C:\Users\spa89\source\repos\ORD\ORD\obj\Debug\ORD.exe
 C:\Users\spa89\source\repos\ORD\ORD\obj\Debug\ORD.pdb
+C:\Users\spa89\source\repos\ORD\ORD\obj\Debug\ORD.csproj.AssemblyReference.cache

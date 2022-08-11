@@ -48,11 +48,10 @@ namespace ORD
             this.button4 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -60,14 +59,18 @@ namespace ORD
             this.label8 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage4
@@ -275,6 +278,9 @@ namespace ORD
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Black;
+            this.tabPage2.Controls.Add(this.label13);
+            this.tabPage2.Controls.Add(this.label12);
+            this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.checkedListBox1);
             this.tabPage2.Controls.Add(this.button6);
@@ -292,65 +298,42 @@ namespace ORD
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = " 숙제";
             // 
-            // checkedListBox1
+            // label13
             // 
-            this.checkedListBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.checkedListBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "3줄",
-            "4줄",
-            "5줄",
-            "6줄"});
-            this.checkedListBox1.Location = new System.Drawing.Point(1224, 107);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(87, 176);
-            this.checkedListBox1.TabIndex = 9;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(596, 546);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(0, 35);
+            this.label13.TabIndex = 10;
             // 
-            // button6
+            // label12
             // 
-            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(1208, 26);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(114, 75);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "정리";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(368, 546);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(0, 35);
+            this.label12.TabIndex = 10;
             // 
-            // pictureBox1
+            // label11
             // 
-            this.pictureBox1.Image = global::ORD.Properties.Resources.기본;
-            this.pictureBox1.Location = new System.Drawing.Point(830, 413);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(533, 330);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(596, 468);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(0, 35);
+            this.label11.TabIndex = 10;
             // 
-            // button2
+            // label10
             // 
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(990, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(181, 75);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "초기화";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("굴림체", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(8, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(320, 600);
-            this.label3.TabIndex = 3;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(368, 468);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 35);
+            this.label10.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("굴림체", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(691, 573);
+            this.label2.Location = new System.Drawing.Point(658, 623);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(247, 96);
             this.label2.TabIndex = 2;
@@ -420,13 +403,60 @@ namespace ORD
             this.label9.Size = new System.Drawing.Size(0, 160);
             this.label9.TabIndex = 4;
             // 
-            // label10
+            // label3
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(376, 46);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 35);
-            this.label10.TabIndex = 10;
+            this.label3.Font = new System.Drawing.Font("굴림체", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(8, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(320, 600);
+            this.label3.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ORD.Properties.Resources.기본;
+            this.pictureBox1.Location = new System.Drawing.Point(830, 413);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(533, 330);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(990, 26);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(181, 75);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "초기화";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button6
+            // 
+            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button6.Location = new System.Drawing.Point(1208, 26);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(114, 75);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "정리";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.checkedListBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "3줄",
+            "4줄",
+            "5줄",
+            "6줄"});
+            this.checkedListBox1.Location = new System.Drawing.Point(1224, 107);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(87, 176);
+            this.checkedListBox1.TabIndex = 9;
             // 
             // Form1
             // 
@@ -449,9 +479,9 @@ namespace ORD
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -477,19 +507,22 @@ namespace ORD
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

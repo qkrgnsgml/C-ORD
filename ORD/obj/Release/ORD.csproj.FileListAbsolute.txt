@@ -11,3 +11,4 @@ C:\Users\spa89\source\repos\ORD\ORD\obj\Release\ORD.pdb
 C:\Users\spa89\source\repos\ORD\ORD\bin\Release\MetroFramework.dll
 C:\Users\spa89\source\repos\ORD\ORD\bin\Release\MetroFramework.Fonts.dll
 C:\Users\spa89\source\repos\ORD\ORD\obj\Release\ORD.csproj.CopyComplete
+C:\Users\spa89\source\repos\ORD\ORD\obj\Release\ORD.csproj.AssemblyReference.cache
